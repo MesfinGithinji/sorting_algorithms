@@ -1,23 +1,23 @@
 #include "sort.h"
 
 /**
- * get_max_value - Returns the maximum value in the array.
+ * get_max - Returns the maximum value in the array.
  * @array: The array of integers.
  * @size: The size of the array.
  *
  * Return: The maximum integer in the array.
  */
-int get_max_value(int *array, int size)
+int get_max(int *array, int size)
 {
-	int max_val, i;
+	int max, i;
 
-	for (max_val = array[0], i = 1; i < size; i++)
+	for (max = array[0], i = 1; i < size; i++)
 	{
-		if (array[i] > max_val)
+		if (array[i] > max)
 			max = array[i];
 	}
 
-	return (max_val);
+	return (max);
 }
 
 /**
@@ -26,7 +26,7 @@ int get_max_value(int *array, int size)
  * @array: The array of integers.
  * @size: The size of the array.
  *
- * Description: Prints the counting array.
+ * Description: Prints the counting array after setting it up.
  */
 void counting_sort(int *array, size_t size)
 {
@@ -38,7 +38,7 @@ void counting_sort(int *array, size_t size)
 	sorted = malloc(sizeof(int) * size);
 	if (sorted == NULL)
 		return;
-	max = get_max_value(array, size);
+	max = get_max(array, size);
 	count = malloc(sizeof(int) * (max + 1));
 	if (count == NULL)
 	{
