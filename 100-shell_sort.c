@@ -17,7 +17,7 @@ void swap_num(int *x, int *y)
 /**
  * shell_sort - Sort an array of integers in ascending
  *              order using the shell sort algorithm.
- * @array: An array of integers.
+ * @array: The array of integers.
  * @size: The size of the array.
  *
  * Description: Uses the Knuth interval sequence.
@@ -39,7 +39,7 @@ void shell_sort(int *array, size_t size)
 			j = i;
 			while (j >= gap && array[j - gap] > array[j])
 			{
-				swap_ints(array + j, array + (j - gap));
+				swap_num(array + j, array + (j - gap));
 				j -= gap;
 			}
 		}
