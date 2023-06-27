@@ -56,7 +56,7 @@ void radix_counting_sort(int *array, size_t size, int sig, int *buff)
  * @size: Size of the array.
  *
  * Description: Uses the LSD radix sort algorithm.
- * 
+ *
  */
 void radix_sort(int *array, size_t size)
 {
